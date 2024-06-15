@@ -68,9 +68,6 @@
 #include <QTimer>
 #include <QToolBar>
 #include <QVBoxLayout>
-// Fixing Boost 1.73 compile errors
-#include <boost/bind/bind.hpp>
-using namespace boost::placeholders;
 #include <QComboBox>
 
 // Fixing Boost 1.73 compile errors
