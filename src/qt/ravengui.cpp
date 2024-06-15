@@ -26,7 +26,7 @@
 #ifdef ENABLE_WALLET
 #include "walletframe.h"
 #include "walletmodel.h"
-#include "mnemonicdialog.h"
+// #include "mnemonicdialog.h"
 #endif // ENABLE_WALLET
 
 #ifdef Q_OS_MAC
@@ -1889,8 +1889,8 @@ void RavenGUI::getPriceInfo()
 #ifdef ENABLE_WALLET
 void RavenGUI::mnemonic()
 {
-        MnemonicDialog dlg(this);
-        dlg.exec();
+//        MnemonicDialog dlg(this);
+//        dlg.exec();
 }
 #endif
 
