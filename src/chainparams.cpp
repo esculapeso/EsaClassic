@@ -294,7 +294,7 @@ public:
            genesis = CreateGenesisBlock(nGenesisTime, i, 0x1e00ffff, 2, 5000 * COIN);
            //genesis.hashPrevBlock = TempHashHolding;
            // Depending on when the timestamp is on the genesis block. You will need to use GetX16RHash or GetX16RV2Hash. Replace GetHash() with these below
-           consensus.hashGenesisBlock = genesis.GetHash();
+           consensus.hashGenesisBlock = genesis.GetX16RHash();
 
            arith_uint256 BestBlockHashArith = UintToArith256(BestBlockHash);
            if (UintToArith256(consensus.hashGenesisBlock) < BestBlockHashArith) {
@@ -338,12 +338,12 @@ public:
 
 //        /////////////////////////////////////////////////////////////////
 
-        genesis = CreateGenesisBlock(nGenesisTime, 15615880, 0x1e00ffff, 2, 5000 * COIN);
+        genesis = CreateGenesisBlock(nGenesisTime, 8313679, 0x1e00ffff, 2, 5000 * COIN);
         consensus.hashGenesisBlock = genesis.GetX16RHash();
 
         //Test MerkleRoot and GenesisBlock
-        assert(consensus.hashGenesisBlock == uint256S("0x000000ecfc5e6324a079542221d00e10362bdc894d56500c414060eea8a3ad5a"));
-        assert(genesis.hashMerkleRoot == uint256S("28ff00a867739a352523808d301f504bc4547699398d70faf2266a8bae5f3516"));
+        assert(consensus.hashGenesisBlock == uint256S("0x000000f135c16236026a3e8750a0fd2671d737b5ae7bc4463a3011e3147cc48b"));
+        assert(genesis.hashMerkleRoot == uint256S("0c49034647bb0103ed9e1d58ceca17954da1dd9f7bf97e4a9712d5875e4f88cf"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
